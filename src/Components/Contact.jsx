@@ -2,6 +2,10 @@ import React from 'react';
 import '../Stylesheet/section.css';
 
 const Contact = () => {
+    const handlesubmit = () =>{
+        const scrollToId = "homeSection";
+        document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth"});
+    }
   return (
     <section id="contactSection">
         <h2>Contact</h2>
@@ -9,7 +13,7 @@ const Contact = () => {
                 ducimus itaque eius iure ullam iste consequuntur reprehenderit numquam consectetur 
                 quos ab temporibus mollitia nemo tempora, soluta quibusdam, qui dolores omnis!
             </p>
-            <button>Go to home</button>
+            <button onClick={() => handlesubmit()}>Go to home</button>
     </section>
   )
 }
