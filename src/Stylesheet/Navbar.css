@@ -1,0 +1,59 @@
+header {
+    background-color: #0792e8;
+    color: #fff;
+    padding: 0.5rem;
+    position: fixed;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    background-color: red;
+    margin: 0 auto;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: green; */
+}
+
+.navContainer h1 {
+    font-size: 2rem;
+    color: blue;
+}
+
+.navContainer nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.navContainer nav ul {
+    list-style: none;
+}
+
+.navContainer nav ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.navContainer nav ul li a {
+    cursor: pointer;
+}
+
+/* .navContainer nav ul li a::before {
+    content: "Lesego";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: green;
+    left: 0;
+    bottom: -5px;
+    transform: scale(0, 1);
+}
+
+.navContainer nav ul li a::before {
+    transform: scale(1, 1);
+} */
