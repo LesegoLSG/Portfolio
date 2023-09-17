@@ -10,6 +10,7 @@ const Navbar = () => {
         const scrollToId = `${content.toLowerCase()}Section`;
 
         const handleClickNavigation = () =>{
+            console.log(scrollToId);
             document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth"});
         }
 
