@@ -18,7 +18,9 @@ const Navbar = () => {
             <ul key={content}>
                 <li>
                     <a onClick={handleClickNavigation} >{content}</a>
+            
                 </li>
+                
             </ul>
         )
     }
@@ -30,6 +32,7 @@ const Navbar = () => {
             <h1>Lesego</h1>
             <nav>
                 {navLinks.map(nav => renderNavLinks(nav))}
+                <a>Extra</a>
             </nav>
             <button>Download Resume</button>
         </div>
