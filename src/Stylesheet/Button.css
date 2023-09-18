@@ -1,0 +1,9 @@
+.btnStyle {
+    min-width: 6rem;
+    min-height: 2rem;
+    cursor: pointer;
+    border: 0.1rem solid #000;
+    border-radius: 0.3rem;
+    margin: 0.1rem;
+
+}

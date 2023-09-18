@@ -2,13 +2,14 @@ import React, { useContext } from 'react';
 // import '../Stylesheet/Navbar.css';
 import { NavContexts } from '../Context/NavContexts';
 import styles from '../Stylesheet/Nav.module.css';
+import Button from '../Components/Button';
 
 
 const Navbar = () => {
     const {activeLinkId} = useContext(NavContexts);
     console.log(activeLinkId);
 
-    const navLinks = ["Home", "About", "Contact"];
+    const navLinks = ["Home", "Contact","About"];
 
     const renderNavLinks = (content) =>{
         const scrollToId = `${content.toLowerCase()}Section`;
@@ -46,7 +47,7 @@ const Navbar = () => {
                 {navLinks.map(nav => renderNavLinks(nav))}
                 <a>Extra</a>
             </nav>
-            <button>Download Resume</button>
+            <Button btnText="Download Resume"/>
         </div>
     </div>
     </header>
