@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import '../Stylesheet/Navbar.css';
+// import '../Stylesheet/Navbar.css';
 import { NavContexts } from '../Context/NavContexts';
-import styles from '../Stylesheet/Navbar.css';
+import styles from '../Stylesheet/Nav.module.css';
 
 
 const Navbar = () => {
@@ -38,9 +38,9 @@ const Navbar = () => {
     }
 
   return (
-    <header className="header">
-    <div className="container">
-        <div className="navContainer">
+    <header className={styles.header}>
+    <div className={styles.container}>
+        <div className={styles.navContainer}>
             <h1 onClick={() => handlesubmit()}>Lesego</h1>
             <nav>
                 {navLinks.map(nav => renderNavLinks(nav))}
