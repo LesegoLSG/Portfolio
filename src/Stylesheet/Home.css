@@ -1,19 +1,39 @@
 .introContent {
-    height: calc(100vh - 3rem);
-    width: 100vw;
+    width: auto;
     max-width: 75rem;
     margin: 0 auto;
-    overflow: hidden;
     position: relative;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
 .imgContent {
     position: absolute;
-    top: 2rem;
-    right: 0;
+    top: 6.5rem;
+    right: 15rem;
     z-index: -1;
     width: 300px;
-    height: 500px;
-    height: 100vh;
+    height: 400px;
+
+}
+
+.Hello {
+    font-size: 1rem;
+}
+
+.introText {
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+.introName {
+    color: yellow;
+}
+
+@media (max-width:430) {
+    .introText {
+        font-size: 1rem;
+        font-weight: bold;
+
+    }
 }

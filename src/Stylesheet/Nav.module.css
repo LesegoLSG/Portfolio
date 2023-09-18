@@ -5,6 +5,7 @@
     position: fixed;
     width: 100%;
     background-color: green;
+    z-index: 2;
 }
 
 .container {
