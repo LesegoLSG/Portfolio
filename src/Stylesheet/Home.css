@@ -1,0 +1,19 @@
+.introContent {
+    height: calc(100vh - 3rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background-color: blueviolet;
+}
+
+.imgContent {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    z-index: -1;
+    width: 300px;
+    height: 500px;
+    height: 100vh;
+}
