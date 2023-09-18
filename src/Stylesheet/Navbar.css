@@ -1,9 +1,10 @@
-header {
+.header {
     background-color: #0792e8;
     color: #fff;
     padding: 0.5rem;
     position: fixed;
     width: 100%;
+    background-color: green;
 }
 
 .container {
@@ -22,6 +23,7 @@ header {
 .navContainer h1 {
     font-size: 2rem;
     color: blue;
+    cursor: pointer;
 }
 
 .navContainer nav {
@@ -33,7 +35,44 @@ header {
     list-style: none;
 }
 
-.navContainer nav ul li a {
+.navContainer button {
+    position: relative;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #eaeaea;
+    background: none;
+    border: none;
+}
+
+.navContainer button:not(.activeClass)::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #eaeaea;
+    left: 0;
+    bottom: -5px;
+    transform: scale(0, 1);
+    transition: transform 0.25s ease;
+    transform-origin: 0 100%;
+}
+
+.navContainer button:not(.activeClass):hover::before {
+    transform: scale(1, 1);
+}
+
+.navContainer button.activeClass::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #eaeaea;
+    bottom: -5px;
+    left: 0;
+}
+
+
+/* .navContainer nav ul li a {
     text-decoration: none;
     font-size: 1rem;
     color: #000;
@@ -44,7 +83,7 @@ header {
     transition: width 0.3s ease;
     cursor: pointer;
     /* background-color: green; */
-}
+/* }
 
 .navContainer nav ul li a::after {
     content: "";
@@ -52,11 +91,11 @@ header {
     height: 3px;
     background-color: pink;
     margin: auto;
-    display: block;
+    display: block; */
 
-    /* position: absolute; */
-}
+/* position: absolute; */
+/* }
 
 .navContainer nav ul li a:hover {
     color: green;
-}
+} */
