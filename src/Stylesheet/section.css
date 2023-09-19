@@ -3,7 +3,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* section min-height (height:100vh) */
+    min-height: 100vh;
     /* background-color: green; */
     border: 2px solid #000;
 
