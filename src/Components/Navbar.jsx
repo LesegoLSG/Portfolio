@@ -1,11 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 // import '../Stylesheet/Navbar.css';
 import { NavContexts } from '../Context/NavContexts';
 import styles from '../Stylesheet/Nav.module.css';
 import Button from '../Components/Button';
+import {AiOutlineBars} from 'react-icons/ai';
+import {GiSplitCross} from 'react-icons/gi';
 
 
 const Navbar = () => {
+    const [togglebar,setTogglebar] = useState(true);
+    const handleToggleBar = () => {
+        setTogglebar(!togglebar);
+        console.log("toggle:", togglebar);
+    }
+
     const {activeLinkId} = useContext(NavContexts);
     console.log(activeLinkId);
 
@@ -47,7 +55,13 @@ const Navbar = () => {
                 {navLinks.map(nav => renderNavLinks(nav))}
                 <a>Extra</a>
             </nav>
-            <Button btnText="Download Resume"/>
+
+            <div className={styles.togglebar}>
+            {togglebar ? <AiOutlineBars onClick={handleToggleBar}/> : 
+            <GiSplitCross onClick={handleToggleBar}/>}
+            </div>
+
+
         </div>
     </div>
     </header>
