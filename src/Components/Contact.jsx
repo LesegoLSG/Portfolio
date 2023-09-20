@@ -1,5 +1,9 @@
 import React from 'react';
+import '../Stylesheet/Contact.css';
 import '../Stylesheet/section.css';
+import {MdOutlineMailLock} from 'react-icons/md';
+import {LiaFacebookMessenger} from 'react-icons/lia';
+import {BiLogoWhatsapp} from 'react-icons/bi';
 import {UseNav} from '../Components/NavigationLinks/UseNav';
 
 const Contact = () => {
@@ -12,12 +16,44 @@ const Contact = () => {
     }
   return (
     <section ref={contactRef} id="contactSection">
-        <h2>Contact</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                ducimus itaque eius iure ullam iste consequuntur reprehenderit numquam consectetur 
-                quos ab temporibus mollitia nemo tempora, soluta quibusdam, qui dolores omnis!
-            </p>
-            <button onClick={() => handlesubmit()}>Go to home</button>
+       <h5>Let's Get In Touch</h5>
+       <h2>Contact Me</h2>
+
+       <div className="container contact__container">
+        {/* Contact option(left side) */}
+        <div className="contact__options">
+          {/* Email */}
+          <article className="contact__option">
+            <MdOutlineMailLock className="contact__option_icon"/>
+            <h4>Email</h4>
+            <h5>lesegomhlongo78@gmail.com</h5>
+            <a href="mailto:lesegomhlongo78@gmail.com">Send an email</a>
+          </article>
+            {/* WhatsApp */}
+          <article className="contact__option">
+            <BiLogoWhatsapp className="contact__option_icon"/>
+            <h4>WhatsApp</h4>
+            <h5>+27 640373089</h5>
+            <a href="https://api/whatsapp.com/send?phone=+27640373089">Send WhatsApp Text</a>
+          </article>
+
+            {/* Messenger */}
+          <article className="contact__option">
+            <LiaFacebookMessenger className="contact__option_icon"/>
+            <h4>Messenger</h4>
+            <h5>Lesego LSG Mhlongo</h5>
+            <a href="https://m.me/lesego.mhlongo.3">Send an Inbox</a>
+          </article>
+        </div>
+        {/* form on the right side */}
+          <form action="">
+                <input type="text" name="name" placeholder="Your Full Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea  name="message" placeholder="Your Full Name" rows="7" required />
+                <button type="submit">Send Message</button>
+          </form>
+       </div>
+
     </section>
   )
 }
