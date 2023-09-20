@@ -18,12 +18,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: green; */
+    background-color: blue;
 }
 
 .navContainer h1 {
     font-size: 2rem;
-    color: blue;
+    color: rgb(255, 0, 55);
     cursor: pointer;
 }
 
@@ -43,6 +43,7 @@
     color: #eaeaea;
     background: none;
     border: none;
+
 }
 
 .navContainer button:not(.activeClass)::before {
@@ -71,6 +72,31 @@
     bottom: -5px;
     left: 0;
 }
+
+.togglebar {
+    font-size: 2rem;
+    display: none;
+}
+
+/* 
+@media (max-width:768px) {
+    .navContainer nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navContainer button {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        border-top: 1px solid #000;
+
+    }
+
+    .togglebar {
+        display: inline-block;
+    }
+} */
 
 
 /* .navContainer nav ul li a {
