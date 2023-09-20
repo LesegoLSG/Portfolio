@@ -18,8 +18,11 @@ const About = () => {
 
   return (
     <section ref={aboutRef} id="aboutSection">
+       
         <Fragment>
+         
           <section className="about">
+          <h1>About</h1>
             <div className="row">
               <div className="column">
                 <div className="about-img"></div>
@@ -46,13 +49,17 @@ const About = () => {
                 <div className="tab-content">
                   {/* About content */}
                   <div className={toggleTab === 1 ? "content active-content": "content"}>
-                    <h2>My Story</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                       Minima ipsum illum distinctio culpa ad. Porro voluptate 
-                       dicta ad ullam saepe, distinctio, impedit eos amet quidem 
-                       incidunt ut. Fuga, ipsam eius?</p>
-                       <h3>I am a web Designer and Developer Having 10 years of Experience</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ex omnis assumenda odio id quos, fuga ab fugit esse totam?</p>
+                    <h2>About me</h2>
+                    <p>I am punctual and motivated individual who is able to work under pressure 
+                      and produce high standard of work. I'm an excellent team worker and able to take 
+                      instructions from all levels and build up working relationships with all
+                      colleagues, i'm also flexible, reliable and possess excellent time keeping skills. 
+                    </p>
+                       <h3>How it all began</h3>
+                    <p>My tech journey began six years ago when i enrolled for Computer Science & Informatics
+                      bachelor degree at University of Johannesburg with little knowledge in the tech industry. However, i got my inspiration
+                      in the programme called 'man in the making' hosted by Miway Insurance Company during 2015.
+                       </p>
                   </div>
                   {/* Skills content */}
 

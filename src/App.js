@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Contact from './Components/Contact';
 import About from './Components/About';
+import Footer from './Components/Footer';
 import NavProvider from './Context/NavContexts';
 
 
@@ -15,7 +16,7 @@ function App() {
         <Home />
         <Contact />
         <About />
-
+        <Footer />
 
       </NavProvider>
 
