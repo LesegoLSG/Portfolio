@@ -1,18 +1,25 @@
-.introContent {
-    width: auto;
-    max-width: 75rem;
-    margin: 0 auto;
+/* #homeSection {
+    background-color: brown;
     position: relative;
-    /* background-color: blueviolet; */
+    padding-left: 6rem;
 }
 
 .imgContent {
-    position: absolute;
-    top: 6.5rem;
-    right: 15rem;
-    z-index: -1;
-    width: 300px;
-    height: 400px;
+    background-image: url(../assets/Graduation.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.introContent {
+    height: 100vh;
+    width: 100vw;
+    padding: 3rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
 
 }
 
@@ -30,10 +37,14 @@
     color: yellow;
 }
 
+.introPara {
+    font-size: 1.2rem;
+}
+
 @media (max-width:430) {
     .introText {
         font-size: 1rem;
         font-weight: bold;
 
     }
-}
+} */

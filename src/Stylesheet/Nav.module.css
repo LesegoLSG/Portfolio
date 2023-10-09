@@ -1,5 +1,5 @@
 .header {
-    background-color: #0792e8;
+    /* background-color: #0792e8; */
     color: #fff;
     padding: 0.5rem;
     position: fixed;
@@ -10,7 +10,7 @@
 
 .container {
     max-width: 1200px;
-    background-color: red;
+    /* background-color: red; */
     margin: 0 auto;
 }
 
@@ -19,6 +19,8 @@
     align-items: center;
     justify-content: space-between;
     background-color: blue;
+    height: auto;
+    width: auto;
 }
 
 .navContainer h1 {
@@ -76,53 +78,50 @@
 .togglebar {
     font-size: 2rem;
     display: none;
+
 }
 
-/* 
-@media (max-width:768px) {
-    .navContainer nav {
-        flex-direction: column;
-        height: auto;
-    }
+.activeNav {
+    color: chocolate;
+}
 
-    .navContainer button {
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        border-top: 1px solid #000;
-
-    }
-
+/* Media query for mobile device */
+@media(max-width:768px) {
     .togglebar {
-        display: inline-block;
+        display: block;
     }
-} */
 
+    .navContainer nav {
+        display: none;
+        /* Hide the navigation links on mobile by default */
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #0792e8;
+        /* z-index: 1; */
+    }
 
-/* .navContainer nav ul li a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #000;
+    .navContainer nav ul {
+        padding: 1rem;
+    }
+
+    .navContainer.nav ul li {
+        margin-bottom: 1rem;
+    }
+
+    /* Show the navigation links when the mobile menu is active */
+    .navContainer.nav ul.activeNav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #0792e8;
+        z-index: 3;
+    }
 }
-
-.navContainer nav ul li a:hover::after {
-    width: 100%;
-    transition: width 0.3s ease;
-    cursor: pointer;
-    /* background-color: green; */
-/* }
-
-.navContainer nav ul li a::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background-color: pink;
-    margin: auto;
-    display: block; */
-
-/* position: absolute; */
-/* }
-
-.navContainer nav ul li a:hover {
-    color: green;
-} */
