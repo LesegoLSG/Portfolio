@@ -8,7 +8,7 @@ import {GiSplitCross} from 'react-icons/gi';
 
 
 const Navbar = () => {
-    const [togglebar,setTogglebar] = useState(true);
+    const [togglebar,setTogglebar] = useState(false);
     const handleToggleBar = () => {
         setTogglebar(!togglebar);
         console.log("toggle:", togglebar);
@@ -24,6 +24,7 @@ const Navbar = () => {
 
         const handleClickNavigation = () =>{
             console.log(scrollToId);
+            // setTogglebar(false);
             document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth"});
         }
 
@@ -51,15 +52,23 @@ const Navbar = () => {
     <div className={styles.container}>
         <div className={styles.navContainer}>
             <h1 onClick={() => handlesubmit()}>Lesego</h1>
-            <nav>
+            {/* Togglebar */}
+            <div className={styles.togglebar}>
+            {togglebar ? (
+                <GiSplitCross onClick={handleToggleBar}/>
+                
+                ):( 
+                <AiOutlineBars onClick={handleToggleBar}/>
+            
+            )}
+            </div>
+            <nav className={`${styles.nav} ${togglebar ? styles.activeNav : ""}`}>
                 {navLinks.map(nav => renderNavLinks(nav))}
                 <a>Extra</a>
+                
             </nav>
 
-            <div className={styles.togglebar}>
-            {togglebar ? <AiOutlineBars onClick={handleToggleBar}/> : 
-            <GiSplitCross onClick={handleToggleBar}/>}
-            </div>
+           
 
 
         </div>
