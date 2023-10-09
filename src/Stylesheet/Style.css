@@ -1,0 +1,19 @@
+/* File imports */
+@import url("About.css");
+@import url("Button.css");
+@import url("Contact.css");
+@import url("Footer.css");
+@import url("Home.css");
+@import url("Nav.module.css");
+@import url("section.css");
+@import url("Navbar.css");
+
+/* Colors for reusability */
+:root {
+    --BackgroundPage-color: #1f2e2a;
+    --Item-color: #37524b;
+    --hover-color: #4a8778;
+    --White-color: #fff;
+    --Black-color: #000;
+
+}

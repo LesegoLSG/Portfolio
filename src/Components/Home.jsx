@@ -15,6 +15,7 @@ const Home = () => {
 
   return (
     <section ref={homeRef} id="homeSection">
+      <div className="imgContent">
         <div className="introContent">
           <span className="Hello">Hello,</span><br/>
           <span className="introText">I'm <span className="introName">Lesego Mhlongo</span><br/>Full Stack developer</span>
@@ -33,7 +34,8 @@ const Home = () => {
           
          
         </div>
-        <img src={Graduation} alt="Profile" className="imgContent"/>
+        {/* <img src={Graduation} alt="Profile" className="imgContent"/> */}
+        </div>
     </section>
   )
 }

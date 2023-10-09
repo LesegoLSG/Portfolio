@@ -1,5 +1,6 @@
 /* Left side contact blocks */
 .container.contact__container {
+    padding-top: 4rem;
     width: 58%;
     display: grid;
     grid-template-columns: 30% 58%;
@@ -13,16 +14,17 @@
 }
 
 .contact__option {
-    background-color: red;
+    background-color: var(--Item-color);
     padding: 1.2rem;
     border-radius: 1.2rem;
     text-align: center;
     border: 1px solid transparent;
+    box-shadow: 0.1rem 0.1rem #000;
 }
 
 .contact__option:hover {
     background-color: transparent;
-    border: 1px solid #dfebea;
+    border: 1px solid green;
 }
 
 .contact__option_icon {
@@ -34,6 +36,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    align-items: center;
 }
 
 input,
@@ -49,7 +52,7 @@ textarea {
     .container.contact__container {
         grid-template-columns: 1fr;
         gap: 2rem;
-        /* width: 100%; */
+        padding: 3rem 1rem;
     }
 }
 

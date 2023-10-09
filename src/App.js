@@ -1,4 +1,5 @@
 import './App.css';
+import './Stylesheet/Style.css';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Contact from './Components/Contact';

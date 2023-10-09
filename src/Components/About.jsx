@@ -22,7 +22,8 @@ const About = () => {
         <Fragment>
          
           <section className="about">
-          <h1>About</h1>
+            <h5>Learn more about me</h5>
+          <h2>About</h2>
             <div className="row">
               <div className="column">
                 <div className="about-img"></div>

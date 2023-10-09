@@ -1,15 +1,17 @@
 .about {
-    padding: 1rem 3rem 3rem 3rem;
+    padding: 3rem 3rem 3rem 3rem;
     background: #f8f8f8;
+    background-color: var(--BackgroundPage-color);
 }
 
 .about h1 {
     font-size: 2rem;
-    text-decoration: underline;
-    margin-bottom: 2rem;
+    /* text-decoration: underline; */
+    margin-bottom: 3rem;
 }
 
 .row {
+    margin-top: 5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -23,7 +25,7 @@
 }
 
 .single-tab {
-    background-color: white;
+    background-color: var(--Item-color);
     margin-right: 10px;
     cursor: pointer;
 }
