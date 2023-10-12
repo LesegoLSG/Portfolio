@@ -17,7 +17,7 @@ const Navbar = () => {
     const {activeLinkId} = useContext(NavContexts);
     console.log(activeLinkId);
 
-    const navLinks = ["Home", "Contact","About"];
+    const navLinks = ["Home","About", "Contact","Projects"];
 
     const renderNavLinks = (content) =>{
         const scrollToId = `${content.toLowerCase()}Section`;
@@ -64,7 +64,7 @@ const Navbar = () => {
             </div>
             <nav className={`${styles.nav} ${togglebar ? styles.activeNav : ""}`}>
                 {navLinks.map(nav => renderNavLinks(nav))}
-                <a>Extra</a>
+               
                 
             </nav>
 

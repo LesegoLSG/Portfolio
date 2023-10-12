@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.wrapper {
+    padding: 10px 0;
+    background-color: red;
+
+}
+
+.card-area {
+    padding: 50px 0;
+    background-color: blue;
+}
+
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+    margin: 50px 50px 50px 50px;
+}
+
+.box {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.box img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.overlayer {
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1c1c1c, 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* padding: 0 40px; */
+    text-align: center;
+    font-size: 16px;
+    transition: height 0.7s;
+}
+
+.overlayer h3 {
+    font-weight: 500;
+    margin-top: 15%;
+    margin-bottom: 5px;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.overlayer a {
+    margin-top: 10px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+
+}
+
+.box:hover img {
+    transform: scale(1.2);
+}
+
+.box:hover .overlayer {
+    height: 100%;
+}
+
+.box:hover .overlayer h3 {
+    margin-top: 15%;
+}

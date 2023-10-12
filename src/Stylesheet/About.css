@@ -4,10 +4,13 @@
     background-color: var(--BackgroundPage-color);
 }
 
-.about h1 {
-    font-size: 2rem;
+.about h5 h2 {
+    /* font-size: 2rem; */
     /* text-decoration: underline; */
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
+    text-align: center;
+
+
 }
 
 .row {

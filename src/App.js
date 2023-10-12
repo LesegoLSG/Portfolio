@@ -11,6 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </Router>
 

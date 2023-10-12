@@ -15,12 +15,13 @@ const Home = () => {
 
   return (
     <section ref={homeRef} id="homeSection">
-      <div className="imgContent">
+     
+      
         <div className="introContent">
           <span className="Hello">Hello,</span><br/>
           <span className="introText">I'm <span className="introName">Lesego Mhlongo</span><br/>Full Stack developer</span>
           <p className="introPara">I'm a skilled full stack developer with experience in creating responsive designs</p>
-          <Button  btnText="Hire Me"/>
+          {/* <Button  btnText="Hire Me"/> */}
           
           {/*Wrapped a resume button with an anchor to download resume*/}
           <a 
@@ -33,7 +34,7 @@ const Home = () => {
           </a>
           
          
-        </div>
+      
         {/* <img src={Graduation} alt="Profile" className="imgContent"/> */}
         </div>
     </section>

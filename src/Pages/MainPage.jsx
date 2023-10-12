@@ -6,6 +6,7 @@ import Contact from '../Components/Contact';
 import About from '../Components/About';
 import Footer from '../Components/Footer';
 import NavProvider from '../Context/NavContexts';
+import Project from '../Components/Projects/Project';
 
 const MainPage = () => {
   return (
@@ -13,8 +14,9 @@ const MainPage = () => {
         <NavProvider>
         <Navbar />
         <Home />
-        <Contact />
         <About />
+        <Contact />
+        <Project/>
         <Footer />
       </NavProvider>
 
