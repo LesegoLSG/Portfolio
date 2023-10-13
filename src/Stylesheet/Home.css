@@ -1,25 +1,26 @@
-/* #homeSection {
-    background-color: brown;
-    position: relative;
-    padding-left: 6rem;
-}
-
-.imgContent {
-    background-image: url(../assets/Graduation.jpg);
+#homeSection {
+    background-image: url("../assets/Graduation.jpg");
     background-size: cover;
     background-position: center;
-
+    background-repeat: no-repeat;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
+
+
 .introContent {
-    height: 100vh;
-    width: 100vw;
+    margin-top: 10rem;
+    width: 60%;
     padding: 3rem;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
+    text-align: left;
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 
 }
 
@@ -47,4 +48,4 @@
         font-weight: bold;
 
     }
-} */
+}

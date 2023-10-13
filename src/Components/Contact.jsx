@@ -22,10 +22,10 @@ const Contact = () => {
 
     const contactRef = UseNav("Contact");
 
-    const handlesubmit = () =>{
-        const scrollToId = "homeSection";
-        document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth"});
-    }
+    // const handlesubmit = () =>{
+    //     const scrollToId = "homeSection";
+    //     document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth"});
+    // }
   return (
     <section ref={contactRef} id="contactSection">
        <h5>Let's Get In Touch</h5>
