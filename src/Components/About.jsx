@@ -20,8 +20,8 @@ const About = () => {
     <section ref={aboutRef} id="aboutSection">
        
         <Fragment>
-         
-          <section className="about">
+         <div className="about">
+          {/* <section className="about"> */}
             <h5>Learn more about me</h5>
           <h2>About</h2>
             <div className="row">
@@ -159,8 +159,8 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </section>
-
+          {/* </section> */}
+          </div>
         </Fragment>
 
 
