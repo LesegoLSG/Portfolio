@@ -5,6 +5,7 @@ import styles from '../Stylesheet/Nav.module.css';
 import Button from '../Components/Button';
 import {AiOutlineBars} from 'react-icons/ai';
 import {GiSplitCross} from 'react-icons/gi';
+import LE from '../assets/LE.png';
 
 
 const Navbar = () => {
@@ -52,6 +53,7 @@ const Navbar = () => {
     <div className={styles.container}>
         <div className={styles.navContainer}>
             <h1 onClick={() => handlesubmit()}>Lesego</h1>
+            {/* <img src={LE} /> */}
             {/* Togglebar */}
             <div className={styles.togglebar}>
             {togglebar ? (
