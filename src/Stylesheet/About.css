@@ -2,6 +2,8 @@
     padding: 3rem 3rem 3rem 3rem;
     background: #f8f8f8;
     background-color: var(--BackgroundPage-color);
+    display: flex;
+    justify-content: center;
 }
 
 .about h5 h2 {
@@ -17,6 +19,7 @@
     margin-top: 5rem;
     display: flex;
     justify-content: space-between;
+
 }
 
 .row .column {
@@ -43,13 +46,13 @@
 }
 
 .about-img {
-    position: relative;
+    /* position: relative; */
     background-image: url("../assets/Graduation.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     height: 600px;
-    width: 100%;
+    width: 90%;
     border-radius: 100%;
 }
 
@@ -57,10 +60,13 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     display: none;
+    background-color: red;
+    max-width: 1500px;
 }
 
 .active-content {
     display: block;
+    /* max-width: 80%; */
 }
 
 .active-tab {

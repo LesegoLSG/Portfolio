@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import '../Stylesheet/section.css';
 import '../Stylesheet/Home.css';
 import Graduation from'../assets/Graduation.jpg';
@@ -8,16 +8,30 @@ import Button from '../Components/Button';
 // importing resume
 import Resume from '../assets/Resume.pdf';
 
+//Motion import
+import ElementOnScreen from './Motion/ElementOnScreen';
+
 
 const Home = () => {
   const homeRef = UseNav("Home"); 
+
+
+   //introRef triggers../Motion/ElementOnScreen.jsx to observe & contact.css to animate
+  const introRef = useRef(null);
+    const introVisible = ElementOnScreen(
+      {
+        root:null,
+        rootMargin:'0px',
+        threshold:0.7,
+      },introRef);
+
 
 
   return (
     <section ref={homeRef} id="homeSection">
      
       
-        <div className="introContent">
+        <div className={`introContent ${!introVisible ? 'fade-in':'fade-out'}`} ref={introRef}>
           <span className="Hello">Hello,</span><br/>
           <span className="introText">I'm <span className="introName">Lesego Mhlongo</span><br/>Full Stack developer</span>
           <p className="introPara">I'm a skilled full stack developer with experience in creating responsive designs</p>
