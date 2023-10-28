@@ -4,8 +4,10 @@
     padding: 0.5rem;
     position: fixed;
     width: 100%;
-    background-color: green;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 50px;
     z-index: 2;
+
 }
 
 .container {
@@ -18,9 +20,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: blue;
+    background-color: #34c7b6;
     height: auto;
-    width: auto;
+    width: 97%;
 }
 
 .navContainer h1 {
@@ -29,9 +31,17 @@
     cursor: pointer;
 }
 
+.navContainer img {
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+}
+
 .navContainer nav {
     display: flex;
     gap: 2.5rem;
+    color: black;
+    background-color: black;
 }
 
 .navContainer nav ul {
@@ -89,39 +99,26 @@
 @media(max-width:768px) {
     .togglebar {
         display: block;
+        cursor: pointer;
     }
 
-    .navContainer nav {
-        display: none;
+    .navContainer .nav {
+        display: inline-flex;
         /* Hide the navigation links on mobile by default */
+        background-color: red;
         flex-direction: column;
         align-items: center;
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #0792e8;
-        /* z-index: 1; */
-    }
-
-    .navContainer nav ul {
-        padding: 1rem;
-    }
-
-    .navContainer.nav ul li {
-        margin-bottom: 1rem;
-    }
-
-    /* Show the navigation links when the mobile menu is active */
-    .navContainer.nav ul.activeNav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #0792e8;
+        /* background-color: #0792e8; */
         z-index: 3;
+
     }
+
+
+
+
+
 }

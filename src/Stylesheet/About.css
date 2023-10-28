@@ -4,12 +4,11 @@
     background-color: var(--BackgroundPage-color);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .about h5 h2 {
-    /* font-size: 2rem; */
-    /* text-decoration: underline; */
-    /* margin-bottom: 3rem; */
+
     text-align: center;
 
 
@@ -18,12 +17,15 @@
 .row {
     margin-top: 5rem;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    align-items: center;
 }
 
 .row .column {
-    width: 45%;
+    width: 100%;
+
 }
 
 .column .tabs {
@@ -51,9 +53,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 600px;
-    width: 90%;
+    height: 300px;
+    width: 300px;
     border-radius: 100%;
+    border: solid black 2px;
+    margin: 0 auto;
+
 }
 
 .content {
@@ -101,7 +106,7 @@
 
 .content p {
     padding-bottom: 1rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.8;
     font-weight: 400;
     /* color: #999; */
@@ -204,7 +209,8 @@
     }
 
     .about-img {
-        height: 500px;
+        height: 200px;
+        width: 200px;
     }
 
     .row .column {

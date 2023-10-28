@@ -1,15 +1,43 @@
-import React, { useContext,useState } from 'react';
+import React, { useContext,useEffect,useState } from 'react';
 // import '../Stylesheet/Navbar.css';
 import { NavContexts } from '../Context/NavContexts';
 import styles from '../Stylesheet/Nav.module.css';
 import Button from '../Components/Button';
 import {AiOutlineBars} from 'react-icons/ai';
-import {GiSplitCross} from 'react-icons/gi';
-import LE from '../assets/LE.png';
+import {MdOutlineCancel} from 'react-icons/md';
+
+//Icons for navbar links
+import {IoIosHome} from 'react-icons/io';
+import {BiSolidContact} from 'react-icons/bi';
+import {FcAbout} from 'react-icons/fc';
+import {GoProjectSymlink} from 'react-icons/go';
+
+import LogoMakr from '../assets/LogoMakr.png';
+import Logo2 from '../assets/Logo2.png';
 
 
 const Navbar = () => {
     const [togglebar,setTogglebar] = useState(false);
+
+    
+    //Event listener to track window width changes
+    useEffect(() =>{
+        const handleResize = () =>{
+            if(window.innerWidth >=768){
+                setTogglebar(true);
+            }else{
+                setTogglebar(false);
+            }
+        };
+
+        //Initial call to set the initial state
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () =>window.removeEventListener('resize', handleResize);
+    },[]);
+
     const handleToggleBar = () => {
         setTogglebar(!togglebar);
         console.log("toggle:", togglebar);
@@ -25,9 +53,26 @@ const Navbar = () => {
 
         const handleClickNavigation = () =>{
             console.log(scrollToId);
-            // setTogglebar(false);
+             setTogglebar(false);
             document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth"});
+            setTogglebar(true);
         }
+
+        //Switch statement to return nav icons
+        const iconComponent = () => {
+            switch (content) {
+                case "Home":
+                    return <IoIosHome />;
+                case "About":
+                    return <FcAbout />;
+                case "Contact":
+                    return <BiSolidContact />;
+                case "Projects":
+                    return <GoProjectSymlink />;
+                default:
+                    return null;
+            }
+        };
 
         return (
             <ul key={content}>
@@ -36,7 +81,9 @@ const Navbar = () => {
                     <button onClick={handleClickNavigation}
                     className={activeLinkId === content ? styles.activeClass 
                         : ""}
-                    >{content}</button>
+                    >
+                        {iconComponent}
+                        {content}</button>
                 </li>
                 
             </ul>
@@ -51,25 +98,32 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
     <div className={styles.container}>
-        <div className={styles.navContainer}>
-            <h1 onClick={() => handlesubmit()}>Lesego</h1>
-            {/* <img src={LE} /> */}
+        <div className={styles.navContainer} >
+            {/* <h1 onClick={() => handlesubmit()}>{LogoMakr}</h1> */}
+            <img onClick={() => handlesubmit()} src={LogoMakr} />
             {/* Togglebar */}
             <div className={styles.togglebar}>
             {togglebar ? (
-                <GiSplitCross onClick={handleToggleBar}/>
+                <MdOutlineCancel onClick={handleToggleBar}/>
                 
                 ):( 
                 <AiOutlineBars onClick={handleToggleBar}/>
             
             )}
             </div>
-            <nav className={`${styles.nav} ${togglebar ? styles.activeNav : ""}`}>
+            
+                    {/* mobile */}
+            {togglebar &&
+            <nav className={ styles.nav}>
                 {navLinks.map(nav => renderNavLinks(nav))}
-               
                 
             </nav>
+           
+            }
 
+           
+        
+        
            
 
 

@@ -1,71 +1,88 @@
 #homeSection {
-    background-image: url("../assets/Graduation.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
+    overflow: hidden;
+    /* margin-top: 50px; */
+    /* background-image: url(../assets/Background-pen.jpg); */
+}
+
+.home-container {
+    height: 600px;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
+    gap: 40px;
 }
 
+.home-container img {
+    width: 70%;
+    height: 500px;
+}
 
+.home-text {
+    width: 100%;
+}
 
-.introContent {
-    margin-top: 10rem;
-    width: 60%;
-    padding: 3rem;
-    font-size: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+.home-text h1 {
+    font-size: 3.3rem;
+    margin-bottom: 1rem;
+    color: red;
     text-align: left;
-    z-index: 2;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-
 }
 
-.fade-in {
-    /* opacity: 0;
-    transition: opacity 0.1s ease-in;
-    transition-duration: 1s; */
-    transform: scale(0);
-    transition: transform 2s ease-in;
-    transition-duration: 0.7s;
-
+.home-text h1 .name-span {
+    color: blue;
 }
 
-.fade-out {
-    /* opacity: 0;
-    transition: opacity 0.1s ease-in;
-    transition-duration: 1s; */
-    transform: scale(1);
-    transition: transform 2s ease-in;
-    transition-duration: 1s;
-
+.home-text p {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    text-align: left;
 }
 
-.Hello {
-    font-size: 1rem;
+.home-text button {
+    padding: 1em 2.1em 1.1em;
+    border-radius: 4px;
+    margin: 8px;
+    border: none;
+    min-width: 12rem;
+    background-color: #8b4513;
 }
 
-.introText {
-    font-size: 3rem;
-    font-weight: bold;
+@media(max-width:884px) {
+    #homeSection {
+        /* padding: 1rem; */
+        padding-top: 15rem;
+        padding-bottom: 5rem;
+    }
 
+    .home-container {
+        margin-top: 10px;
+        flex-direction: column;
+        margin: 0 0 8rem 0;
+    }
+
+    .home-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-text h1 {
+        font-size: 2rem;
+    }
 }
 
-.introName {
-    color: yellow;
+@media(max-width:678px) {
+    .home-text h1 {
+        font-size: 2rem;
+    }
 }
 
-.introPara {
-    font-size: 1.2rem;
-}
-
-@media (max-width:430) {
-    .introText {
+@media(max-width:428px) {
+    .home-text h1 {
         font-size: 1rem;
-        font-weight: bold;
-
     }
 }

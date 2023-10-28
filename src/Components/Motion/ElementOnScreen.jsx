@@ -1,5 +1,6 @@
 import React, {useState,useRef,useMemo,useEffect} from 'react';
 
+//This component is to 
 const ElementOnScreen = (options,targetRef) =>{
     const [isVisible,setIsVisible] = useState(false);
     

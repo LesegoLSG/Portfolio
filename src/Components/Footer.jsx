@@ -6,20 +6,27 @@ import {BiLogoTwitter} from 'react-icons/bi';
 import {BiLogoLinkedin} from 'react-icons/bi'
 
 const Footer = () => {
-    const handlesubmit = () =>{
-        const scrollToId = "homeSection";
-        document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth"});
+    
+
+    //Navigating to the section
+    const handlesubmit = (scrollToId) =>{
+        const currentSection = document.getElementById(scrollToId);
+
+        if(currentSection){
+            currentSection.scrollIntoView({behavior:"smooth"});
+        }
     }
+    
   return (
    <footer>
-        <h1 onClick={handlesubmit}>Lesego</h1>
+        <h1 onClick={() =>handlesubmit("homeSection")}>Lesego</h1>
 
         <ul>
-           <li><button>Home</button></li>
-           <li><button>Contact</button></li>
-           <li><button>About</button></li>
-           <li><button>Extra1</button></li>
-           <li><button>Extra2</button></li>
+           <li onClick={() =>handlesubmit("homeSection")}><button>Home</button></li>
+           <li onClick={() =>handlesubmit("aboutSection")}><button>About</button></li>
+           <li onClick={() =>handlesubmit("contactSection")}><button>Contact</button></li>
+           <li onClick={() =>handlesubmit("projectsSection")}><button>Projects</button></li>
+           <li onClick={() =>handlesubmit("homeSection")}><button>Extra2</button></li>
         </ul>
 
         <div className="social__media">

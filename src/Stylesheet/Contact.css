@@ -44,7 +44,9 @@
 
 .contact__option:hover {
     background-color: transparent;
-    border: 1px solid green;
+    border: 1px solid #34c7b6;
+    color: var(--Black-color);
+
 }
 
 .contact__option_icon {
@@ -52,7 +54,18 @@
 }
 
 /* Right side contact form */
-form {
+
+
+/* Before animation */
+/* form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+} */
+
+/* new for animation */
+.form-container {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -64,7 +77,7 @@ textarea {
     width: 100%;
     padding: 1.6rem;
     background-color: transparent;
-    border: 1px solid green;
+    border: 2px solid #34c7b6;
     resize: none
 }
 
