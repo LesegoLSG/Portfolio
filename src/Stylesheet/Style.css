@@ -10,10 +10,11 @@
 
 /* Colors for reusability */
 :root {
-    --BackgroundPage-color: #1f2e2a;
-    --Item-color: #37524b;
-    --hover-color: #4a8778;
-    --White-color: #fff;
+    /* --BackgroundPage-color: #1f2e2a; */
+    --Item-color: #34c7b6;
+    --hover-color: transparent;
     --Black-color: #000;
+    --White-color: #fff;
+
 
 }

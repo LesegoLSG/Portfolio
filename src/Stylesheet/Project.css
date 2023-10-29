@@ -11,6 +11,29 @@
 
 }
 
+
+
+.fade-in {
+    /* opacity: 0;
+    transition: opacity 0.1s ease-in;
+    transition-duration: 1s; */
+    transform: scale(0);
+    transition: transform 2s ease-in;
+    transition-duration: 2s;
+
+
+}
+
+.fade-out {
+    /* opacity: 0;
+    transition: opacity 0.1s ease-in;
+    transition-duration: 1s; */
+    transform: scale(1);
+    transition: transform 2s ease-in;
+    transition-duration: 2s;
+
+}
+
 .card-area {
     padding: 50px 0;
     background-color: blue;
@@ -38,7 +61,7 @@
 }
 
 .overlayer {
-    height: 0;
+    height: 3.7rem;
     width: 100%;
     background: linear-gradient(transparent, #1c1c1c, 58%);
     border-radius: 10px;

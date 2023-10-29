@@ -1,4 +1,4 @@
-import React,{useRef} from 'react';
+import React,{useRef, useState, useEffect} from 'react';
 import '../Stylesheet/section.css';
 import '../Stylesheet/Home.css';
 import Graduation from'../assets/Graduation.jpg';
@@ -10,6 +10,9 @@ import Resume from '../assets/Resume.pdf';
 
 //Motion import
 import ElementOnScreen from './Motion/ElementOnScreen';
+
+//Typewriter
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const Home = () => {
@@ -26,33 +29,54 @@ const Home = () => {
       },introRef);
 
 
+      const [isTyping,setIsTyping] = useState(false);
+
+      //Check if the introRef is visible, and trigger the typewriter animation
+      useEffect(() =>{
+        if(introVisible && !isTyping){
+          setIsTyping(true);
+          console.log("Is typing:", isTyping)
+        }
+      },[introVisible,isTyping]);
+     
+
 
   return (
     <section ref={homeRef} id="homeSection">
-     
+      <div className="home-container">
       
-        <div className={`introContent ${!introVisible ? 'fade-in':'fade-out'}`} ref={introRef}>
-          <span className="Hello">Hello,</span><br/>
-          <span className="introText">I'm <span className="introName">Lesego Mhlongo</span><br/>Full Stack developer</span>
-          <p className="introPara">I'm a skilled full stack developer with experience in creating responsive designs</p>
-          {/* <Button  btnText="Hire Me"/> */}
-          
-          {/*Wrapped a resume button with an anchor to download resume*/}
-          <a 
-            href={Resume}
-            download="Lesego_Mhlongo_Resume"
-            target="_blank"
-            rel="noreferrer"
-          >
-          <Button  btnText="Resume"/>
-          </a>
-          
-         
+        <img src={Graduation} alt />
       
-        {/* <img src={Graduation} alt="Profile" className="imgContent"/> */}
-        </div>
+
+      <div className="home-text">
+    
+        <h1>Hi...</h1>
+        <h1>I'm <span className="name-span">Lesego Mhlongo</span></h1>
+        <h1>Fullstack Developer</h1>
+        <p ref={introRef}> I'm a skilled full stack developer with experience in creating:
+           {' '}
+           <br/>
+           {isTyping && (
+              <Typewriter
+                words={[
+                  'responsive designs',
+                  'web applications.',
+                  'mobile applications',
+                  ' and more.']}
+                loop={false}
+                cursor
+                cursorStyle="_"
+                typeSpeed={150}
+              />
+           )}
+        </p>
+        <button>Hire Me</button>
+        <button>Download resume</button>
+      </div>
+      </div>
+       
     </section>
   )
-}
+  }
 
 export default Home;

@@ -62,6 +62,15 @@ const Contact = () => {
           threshold:0.7,
         },messengerRef);
    
+       //Form triggers../Motion/ElementOnScreen.jsx to observe & contact.css to animate
+        const FormAnimationRef = useRef(null);
+        const FormAnimationVisible = ElementOnScreen(
+          {
+            root:null,
+            rootMargin:'0px',
+            threshold:0.3,
+          },messengerRef);
+     
    
 
   return (
@@ -98,10 +107,13 @@ const Contact = () => {
         </div>
         {/* form on the right side */}
           <form ref={form} onSubmit={sendEmail}>
+           <div className={`form-container ${!FormAnimationVisible?'fade-in':'fade-out'}`} ref={FormAnimationRef}>
                 <input type="text" name="name" placeholder="Your Full Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
                 <textarea  name="message" placeholder="Your Message" rows="7" required />
-                <button type="submit">Send Message</button>
+                <button type="submit" className="btnStyle">Send Message</button>
+                
+                </div>
           </form>
        </div>
 

@@ -20,10 +20,10 @@ const About = () => {
     <section ref={aboutRef} id="aboutSection">
        
         <Fragment>
-         <div className="about">
-          {/* <section className="about"> */}
             <h5>Learn more about me</h5>
           <h2>About</h2>
+         <div className="about">
+          {/* <section className="about"> */}
             <div className="row">
               <div className="column">
                 <div className="about-img"></div>
