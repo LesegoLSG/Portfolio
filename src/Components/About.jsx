@@ -16,6 +16,13 @@ const About = () => {
     setToggleTab(index);
   }
 
+  const [isFlipped,setIsFlipped] = useState(false);
+
+  const flipContent = () =>{
+    setIsFlipped(!isFlipped);
+    
+  }
+
   return (
     <section ref={aboutRef} id="aboutSection">
        
@@ -49,7 +56,11 @@ const About = () => {
                 </div>
                 <div className="tab-content">
                   {/* About content */}
+                 
                   <div className={toggleTab === 1 ? "content active-content": "content"}>
+                  
+
+
                     <h2>About me</h2>
                     <p>I am punctual and motivated individual who is able to work under pressure 
                       and produce high standard of work. I'm an excellent team worker and able to take 
@@ -61,6 +72,7 @@ const About = () => {
                       bachelor degree at University of Johannesburg with little knowledge in the tech industry. However, i got my inspiration
                       in the programme called 'man in the making' hosted by Miway Insurance Company during 2015.
                        </p>
+                       
                   </div>
                   {/* Skills content */}
 

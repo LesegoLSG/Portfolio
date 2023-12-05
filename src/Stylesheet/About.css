@@ -38,6 +38,7 @@
     cursor: pointer;
 }
 
+
 .single-tab h2 {
     display: block;
     padding: 10px 16px;
@@ -67,17 +68,59 @@
     display: none;
     background-color: red;
     max-width: 1500px;
+
+
+
 }
 
 .active-content {
     display: block;
-    /* max-width: 80%; */
+
+
+
 }
+
+
 
 .active-tab {
     background: #18dcff;
     position: relative;
+
+
+
+
 }
+
+.fade-in {
+    /* opacity: 0;
+    transition: opacity 0.1s ease-in;
+    transition-duration: 1s; */
+    transform: scale(0.5);
+    transition: transform 2s ease-in;
+    transition-duration: 0.7s;
+
+}
+
+.fade-out {
+    /* opacity: 0;
+    transition: opacity 0.1s ease-in;
+    transition-duration: 1s; */
+    transform: scale(1);
+    transition: transform 2s ease-in;
+    transition-duration: 1s;
+
+}
+
+/* .flip-animation {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+} */
 
 .active-tab::before {
     position: absolute;
@@ -106,9 +149,9 @@
 
 .content p {
     padding-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.8;
-    font-weight: 400;
+    font-weight: 300;
     /* color: #999; */
 }
 

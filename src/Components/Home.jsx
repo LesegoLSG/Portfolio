@@ -14,9 +14,27 @@ import ElementOnScreen from './Motion/ElementOnScreen';
 //Typewriter
 import { Typewriter } from 'react-simple-typewriter'
 
+//React icons
+import {HiMiniNewspaper} from 'react-icons/hi2';
+import {RiDownload2Fill} from 'react-icons/ri';
+
 
 const Home = () => {
   const homeRef = UseNav("Home"); 
+
+
+  //Navigating to contact page 
+   const handlesubmit = () =>{
+        const scrollToId = "contactSection";
+        document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth"});
+    }
+  //Download resume
+  const handleDownloadResume = () =>{
+    const downloadLink = document.createElement('a');
+    downloadLink.href = Resume;
+    downloadLink.download='Lesego_Mhlongo_Resume.pdf';
+    downloadLink.click();
+  }
 
 
    //introRef triggers../Motion/ElementOnScreen.jsx to observe & contact.css to animate
@@ -47,8 +65,8 @@ const Home = () => {
       
         <img src={Graduation} alt />
       
-
-      <div className="home-text">
+    
+      <div className={`home-text ${!introVisible? 'fade-in':'fade-out'}`} ref={introRef}>
     
         <h1>Hi...</h1>
         <h1>I'm <span className="name-span">Lesego Mhlongo</span></h1>
@@ -70,8 +88,8 @@ const Home = () => {
               />
            )}
         </p>
-        <button>Hire Me</button>
-        <button>Download resume</button>
+        <button onClick={handlesubmit}><HiMiniNewspaper/> Hire Me</button>
+        <button onClick={handleDownloadResume}><RiDownload2Fill/> Download resume</button>
       </div>
       </div>
        

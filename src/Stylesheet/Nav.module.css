@@ -4,7 +4,7 @@
     padding: 0.5rem;
     position: fixed;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     height: 50px;
     z-index: 2;
 
@@ -40,13 +40,17 @@
 .navContainer nav {
     display: flex;
     gap: 2.5rem;
-    color: black;
-    background-color: black;
+    /* color: black; */
+    /* background-color: black; */
 }
+
+
 
 .navContainer nav ul {
     list-style: none;
 }
+
+
 
 .navContainer button {
     position: relative;
@@ -56,6 +60,10 @@
     background: none;
     border: none;
 
+}
+
+.navContainer button:hover {
+    color: #98a2b3;
 }
 
 .navContainer button:not(.activeClass)::before {
@@ -105,13 +113,15 @@
     .navContainer .nav {
         display: inline-flex;
         /* Hide the navigation links on mobile by default */
-        background-color: red;
+        background-color: #34c7b6;
+        ;
         flex-direction: column;
         align-items: center;
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
+        height: 230px;
         /* background-color: #0792e8; */
         z-index: 3;
 
