@@ -9,7 +9,7 @@ import {MdOutlineCancel} from 'react-icons/md';
 //Icons for navbar links
 import {IoIosHome} from 'react-icons/io';
 import {BiSolidContact} from 'react-icons/bi';
-import {FcAbout} from 'react-icons/fc';
+import { BiSolidInfoCircle } from "react-icons/bi";
 import {GoProjectSymlink} from 'react-icons/go';
 
 import LogoMakr from '../assets/LogoMakr.png';
@@ -64,7 +64,7 @@ const Navbar = () => {
                 case "Home":
                     return <IoIosHome />;
                 case "About":
-                    return <FcAbout />;
+                    return <BiSolidInfoCircle />;
                 case "Contact":
                     return <BiSolidContact />;
                 case "Projects":
@@ -82,7 +82,7 @@ const Navbar = () => {
                     className={activeLinkId === content ? styles.activeClass 
                         : ""}
                     >
-                        {iconComponent}
+                        {iconComponent()}
                         {content}</button>
                 </li>
                 

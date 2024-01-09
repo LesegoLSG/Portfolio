@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Stylesheet/Footer.css';
+import LogoMakr from '../assets/LogoMakr.png'
 import {BiLogoFacebook} from 'react-icons/bi';
 import {BiLogoWhatsapp} from 'react-icons/bi';
 import {BiLogoTwitter} from 'react-icons/bi';
@@ -16,10 +17,16 @@ const Footer = () => {
             currentSection.scrollIntoView({behavior:"smooth"});
         }
     }
+    // Passing a section to the above function (handlesubmit)
+    const handleImageClick = () =>{
+        handlesubmit("homeSection");
+    }
     
   return (
    <footer>
-        <h1 onClick={() =>handlesubmit("homeSection")}>Lesego</h1>
+
+{/* onClick={handlesubmit("homeSection")} */}
+        <img src={LogoMakr} alt='Lesego' onClick={handleImageClick}/>
 
         <ul>
            <li onClick={() =>handlesubmit("homeSection")}><button>Home</button></li>
@@ -30,10 +37,10 @@ const Footer = () => {
         </ul>
 
         <div className="social__media">
-            <a href="https://www.facebook.com/lesego.mhlongo.3"><BiLogoFacebook/></a>
-            <a href="https://wa.me/0640373089"><BiLogoWhatsapp/></a>
-            <a href="#"><BiLogoTwitter/></a>
-            <a href="https://linkedin.com/in/lesego-mhlongo-081a82228"><BiLogoLinkedin/></a>
+            <a className='facebook' href="https://www.facebook.com/lesego.mhlongo.3"><BiLogoFacebook/></a>
+            <a className='whatsapp' href="https://wa.me/0640373089"><BiLogoWhatsapp/></a>
+            <a className='twitter' href="#"><BiLogoTwitter/></a>
+            <a className='linkedin' href="https://linkedin.com/in/lesego-mhlongo-081a82228"><BiLogoLinkedin/></a>
         </div>
 
         <div className="Footer__rights">

@@ -1,9 +1,36 @@
 #homeSection {
     height: 100vh;
     overflow: hidden;
+    position: relative;
     /* margin-top: 50px; */
     /* background-image: url(../assets/Background-pen.jpg); */
+    /* background-color: red; */
 }
+
+.custom-shape-divider-bottom-1704776983 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1704776983 svg {
+    position: relative;
+    display: block;
+    width: calc(201% + 1.3px);
+    height: 86px;
+}
+
+.custom-shape-divider-bottom-1704776983 .shape-fill {
+    fill: #656a75;
+}
+
+.home-animation {
+    color: #34c7b6;
+}
+
 
 .home-container {
     height: 600px;
@@ -17,9 +44,33 @@
     gap: 40px;
 }
 
-.home-container img {
+/* .home-container img {
     width: 70%;
     height: 500px;
+} */
+
+.blob-image img {
+    /* background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1503023345310-bd7c1de61c7d%3Fq%3D80%26w%3D1000%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%253D&tbnid=Y8NKKCmLLDotWM&vet=12ahUKEwiM8_vD-tCDAxWgmicCHU7gDmMQMygEegQIARB9..i&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fhuman&docid=ZaycYywhXLmIVM&w=1000&h=1250&itg=1&q=images&ved=2ahUKEwiM8_vD-tCDAxWgmicCHU7gDmMQMygEegQIARB9); */
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    margin: 20px;
+    box-shadow: 0 15px 15px 15px #34c7b6;
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
 }
 
 .home-text {
@@ -29,12 +80,13 @@
 .home-text h1 {
     font-size: 3.3rem;
     margin-bottom: 1rem;
-    color: red;
+    color: #4a515c;
     text-align: left;
+    font-family: Georgia, serif;
 }
 
 .home-text h1 .name-span {
-    color: blue;
+    color: #fff;
 }
 
 .home-text p {
@@ -49,7 +101,15 @@
     margin: 8px;
     border: none;
     min-width: 12rem;
-    background-color: #8b4513;
+    color: #fff;
+    background-color: #34c7b6;
+    z-index: 1;
+}
+
+.home-text button:hover {
+    background-color: #4a515c;
+    border: solid 1px #34c7b6;
+    color: #fff;
 }
 
 @media(max-width:884px) {

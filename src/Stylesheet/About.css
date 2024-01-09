@@ -1,3 +1,48 @@
+#aboutSection {
+    background-color: #656a75;
+    position: relative;
+
+}
+
+
+
+.custom-shape-divider-bottom-1704791646 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1704791646 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 46px;
+}
+
+.custom-shape-divider-bottom-1704791646 .shape-fill {
+    fill: #323438;
+}
+
+
+/* h5,
+h2 {
+    color: #323438;
+} */
+.about .h5 .h2 {
+    text-align: center;
+    color: #34c7b6;
+}
+
+.animation-text {
+    text-align: center;
+    color: #000;
+}
+
+
 .about {
     padding: 3rem 3rem 3rem 3rem;
     background: #f8f8f8;
@@ -5,22 +50,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.about h5 h2 {
-
-    text-align: center;
-
+    /* color: black; */
 
 }
+
 
 .row {
     margin-top: 5rem;
     display: flex;
     justify-content: center;
-    background-color: black;
+    /* background-color: black; */
     width: 100%;
     align-items: center;
+    /* color: #000; */
 }
 
 .row .column {
@@ -38,25 +80,30 @@
     cursor: pointer;
 }
 
+.single-tab:hover {
+    background-color: #4a515c;
+    border: solid 1px #34c7b6;
+}
+
 .single-tab h2 {
     display: block;
     padding: 10px 16px;
     border-radius: 4px;
-    color: #3c3c3c;
+    color: #fff;
     font-size: 0.8rem;
     font-weight: 600;
 }
 
 .about-img {
     /* position: relative; */
-    background-image: url("../assets/Graduation.jpg");
+    background-image: url("../assets/Graduation_hat.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     height: 300px;
     width: 300px;
     border-radius: 100%;
-    border: solid black 2px;
+    border: solid 1px #34c7b6;
     margin: 0 auto;
 
 }
@@ -65,19 +112,26 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     display: none;
-    background-color: red;
+    /* background-color: red; */
     max-width: 1500px;
+    /* color: #000; */
+
 }
+
+
 
 .active-content {
     display: block;
-    /* max-width: 80%; */
 }
+
+
 
 .active-tab {
     background: #18dcff;
     position: relative;
 }
+
+
 
 .active-tab::before {
     position: absolute;
@@ -108,7 +162,7 @@
     padding-bottom: 1rem;
     font-size: 1rem;
     line-height: 1.8;
-    font-weight: 400;
+    font-weight: 300;
     /* color: #999; */
 }
 
@@ -131,11 +185,16 @@
     margin-right: 20px;
 }
 
+
 .progress-wrap h3 {
     font-size: 14px !important;
     margin-bottom: 10px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.icons-text {
+    display: flex;
 }
 
 .progress {
@@ -196,6 +255,28 @@
 .exp-column p {
     margin-top: 10px;
 }
+
+.fade-in {
+    /* opacity: 0;
+    transition: opacity 0.1s ease-in;
+    transition-duration: 1s; */
+    transform: scale(0);
+    transition: transform 2s ease-in;
+    transition-duration: 0.7s;
+
+}
+
+.fade-out {
+    /* opacity: 0;
+    transition: opacity 0.1s ease-in;
+    transition-duration: 1s; */
+    transform: scale(1);
+    transition: transform 2s ease-in;
+    transition-duration: 1s;
+
+}
+
+
 
 /* Responsive on mobile and table devices */
 @media screen and (max-width:768px) {
