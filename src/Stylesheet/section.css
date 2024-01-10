@@ -9,12 +9,12 @@ section {
 
 
     /* Background-Image */
-    background-color: #000;
+    background-color: rgb(50, 52, 56);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     color: var(--White-color);
     /* padding-top: 50px; */
 
