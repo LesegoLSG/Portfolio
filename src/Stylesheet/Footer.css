@@ -1,9 +1,9 @@
 footer {
-    /* background: linear-gradient(to right, #4a8778, #0d3027); */
-    padding: 3rem 0;
+    background-color: #34c7b6;
+    padding: 1rem 0;
     text-align: center;
     font-size: 0.9rem;
-    animation: animate 30s linear infinite;
+    /* animation: animate 30s linear infinite; */
     background-size: 1000px 10px;
 }
 
@@ -23,18 +23,18 @@ button {
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    color: #fff;
 }
 
 button:hover {
-    color: aqua;
+    color: #4a515c;
 }
 
-footer h1 {
-    cursor: pointer;
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
+footer img {
     display: inline-block;
+    width: 5rem;
+    height: 3.6rem;
+    cursor: pointer;
 }
 
 footer ul {
@@ -43,9 +43,9 @@ footer ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 4rem;
-    margin: 0 auto 3rem;
-
+    margin: 0 auto 1rem;
 }
+
 
 .social__media {
     display: flex;
@@ -63,13 +63,34 @@ footer ul {
     padding: 0.4rem;
     border-radius: 0.7rem;
     display: flex;
-    border: 1px solid transparent;
+    background-color: transparent;
+    border: 1px solid #4a515c;
+    transition: transform 0.3 ease-in-out;
 }
 
 .social__media a:hover {
-    background: transparent;
-    color: red;
-    border-color: red;
+    background-color: #4a515c;
+    transform: scale(1.1);
+}
+
+.social__media .facebook {
+    color: #1877F2;
+
+}
+
+.social__media .whatsapp {
+    color: #25D366;
+
+}
+
+.social__media .twitter {
+    color: #1DA1F2;
+
+}
+
+.social__media .linkedin {
+    color: #0077b5;
+
 }
 
 @media screen and (max-width:600px) {
