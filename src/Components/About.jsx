@@ -1,8 +1,20 @@
 import React from 'react';
-import { Fragment, useState } from 'react';
+import { Fragment, useState,useRef,useEffect} from 'react';
 import '../Stylesheet/section.css';
 import {UseNav} from '../Components/NavigationLinks/UseNav';
 import '../Stylesheet/About.css';
+import JavaIcon from '../assets/Icons/Java.png';
+import ReactIcon from '../assets/Icons/react.png';
+import HtmlIcon from '../assets/Icons/HTML.png';
+import CssIcon from '../assets/Icons/Css.png';
+import Tailwind from '../assets/Icons/Tailwind.png';
+import Typescript from '../assets/Icons/Typescript.png';
+import SQL from '../assets/Icons/Sql.png';
+import Git from '../assets/Icons/Git.png';
+import ElementOnScreen from './Motion/ElementOnScreen';
+
+//Typewriter
+import { Typewriter } from 'react-simple-typewriter'
 
 const About = () => {
   //Ref to about page/section
@@ -16,24 +28,83 @@ const About = () => {
     setToggleTab(index);
   }
 
-  const [isFlipped,setIsFlipped] = useState(false);
+  // const [isFlipped,setIsFlipped] = useState(false);
 
-  const flipContent = () =>{
-    setIsFlipped(!isFlipped);
+  // const flipContent = () =>{
+  //   setIsFlipped(!isFlipped);
     
-  }
+  // }
+
+  //EmailRef triggers ../Motion/ElementOnScreen.jsx to observe & contact.css to animate
+  const imageRef = useRef(null);
+  const imageVisible = ElementOnScreen(
+    {
+      root:null,
+      rootMargin:'0px',
+      threshold:0.7,
+    },imageRef);
+
+     //introRef triggers../Motion/ElementOnScreen.jsx to observe & contact.css to animate
+  const introRef = useRef(null);
+  const introVisible = ElementOnScreen(
+    {
+      root:null,
+      rootMargin:'0px',
+      threshold:0.7,
+    },introRef);
+
+    const contentRef = useRef(null);
+  const contentVisible = ElementOnScreen(
+    {
+      root:null,
+      rootMargin:'0px',
+      threshold:0.7,
+    },contentRef);
+
+
+    const [isTyping,setIsTyping] = useState(false);
+
+    //Check if the introRef is visible, and trigger the typewriter animation
+    useEffect(() =>{
+      if(introVisible && !isTyping){
+        setIsTyping(true);
+        console.log("Is typing:", isTyping)
+      }
+    },[introVisible,isTyping]);
 
   return (
     <section ref={aboutRef} id="aboutSection">
        
         <Fragment>
-            <h5>Learn more about me</h5>
+    
+          <h5>Learn more about me</h5>
           <h2>About</h2>
+            
          <div className="about">
           {/* <section className="about"> */}
             <div className="row">
               <div className="column">
-                <div className="about-img"></div>
+                <div className={`about-img ${!imageVisible? 'fade-in':'fade-out'}`} ref={imageRef}></div>
+                <div className="animation-text">
+                  <br></br>
+                       <p ref={introRef}> Description:
+                        {' '}
+                        
+                        {isTyping && (
+                            <Typewriter
+                              words={[
+                                'responsive designs',
+                                'web applications.',
+                                'mobile applications',
+                                ' and more.']}
+                              loop={false}
+                              cursor
+                              cursorStyle="_"
+                              typeSpeed={150}
+                            />
+                        )}
+                      </p>
+                </div>
               </div>
               {/* Each tab column to display correct content on the page */}
               <div className="column">
@@ -78,15 +149,20 @@ const About = () => {
 
                   <div className={toggleTab === 2 ? "content active-content": "content"}>
                     <h2>Skills</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                       Minima ipsum illum distinctio culpa ad. Porro voluptate 
-                       dicta ad ullam saepe, distinctio, impedit eos amet quidem 
-                       incidunt ut. Fuga, ipsam eius?</p>
+                    <p>I am proficient in a diverse set of programming languages and technologies
+                      , honed through years of hands-on experience. My expertise spans Java, React,
+                       HTML, CSS, Tailwind, TypeScript, SQL, and Git/Github, each mastered to
+                        varying degrees, empowering me to craft robust solutions and innovative 
+                        applications.</p>
                  
                     <div className="skills-row">
                       <div className="skills-column">
                         <div className="progress-wrap">
+                          {/* Display icon and h3 in flex */}
+                          <div className="icons-text">
+                          <img src={JavaIcon} alt='Java' className="icon"/>
                           <h3>Java</h3>
+                          </div>
                           <div className="progress">
                             <div className="progress-bar Java">
                               <span>80%</span>
@@ -97,7 +173,10 @@ const About = () => {
 
                       <div className="skills-column">
                         <div className="progress-wrap">
+                        <div className="icons-text">
+                          <img src={ReactIcon} alt='React' className="icon"/>
                           <h3>React</h3>
+                          </div>
                           <div className="progress">
                             <div className="progress-bar React">
                               <span>80%</span>
@@ -108,7 +187,11 @@ const About = () => {
 
                       <div className="skills-column">
                         <div className="progress-wrap">
-                          <h3>Html_and_CSS</h3>
+                        <div className="icons-text">
+                          <img src={HtmlIcon} alt='Html' className="icon"/>
+                          <img src={CssIcon} alt='Css' className="icon"/>
+                          <h3>HTML & CSS</h3>
+                          </div>
                           <div className="progress">
                             <div className="progress-bar Html_and_CSS">
                               <span>90%</span>
@@ -119,7 +202,10 @@ const About = () => {
 
                       <div className="skills-column">
                         <div className="progress-wrap">
-                          <h3>Bootstrap</h3>
+                        <div className="icons-text">
+                          <img src={Tailwind} alt='Tailwind' className="icon"/>
+                          <h3>TailWind</h3>
+                          </div>
                           <div className="progress">
                             <div className="progress-bar Bootstrap">
                               <span>85%</span>
@@ -130,10 +216,42 @@ const About = () => {
 
                       <div className="skills-column">
                         <div className="progress-wrap">
-                          <h3>Net_developer</h3>
+                        <div className="icons-text">
+                          <img src={Typescript} alt='Typescript' className="icon"/>
+                          <h3>Typescript</h3>
+                          </div>
                           <div className="progress">
                             <div className="progress-bar Net_developer">
                               <span>70%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div className="skills-column">
+                        <div className="progress-wrap">
+                        <div className="icons-text">
+                          <img src={SQL} alt='SQL' className="icon"/>
+                          <h3>SQL & NoSQL</h3>
+                          </div>
+                          <div className="progress">
+                            <div className="progress-bar Bootstrap">
+                              <span>85%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="skills-column">
+                        <div className="progress-wrap">
+                        <div className="icons-text">
+                          <img src={Git} alt='Git' className="icon"/>
+                          <h3>Git & Github</h3>
+                          </div>
+                          <div className="progress">
+                            <div className="progress-bar Bootstrap">
+                              <span>85%</span>
                             </div>
                           </div>
                         </div>
@@ -175,7 +293,11 @@ const About = () => {
           </div>
         </Fragment>
 
-
+        <div class="custom-shape-divider-bottom-1704791646">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div>
     </section>
   )
 }
