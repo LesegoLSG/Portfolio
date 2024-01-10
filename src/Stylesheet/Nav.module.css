@@ -23,6 +23,8 @@
     background-color: #34c7b6;
     height: auto;
     width: 97%;
+    ;
+    border-radius: 10px;
 }
 
 .navContainer h1 {
