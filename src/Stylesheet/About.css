@@ -1,50 +1,36 @@
 #aboutSection {
-    background-color: #656a75;
+    background-color: var(--background-color-light-theme);
     position: relative;
 
 }
 
-
-
-.custom-shape-divider-bottom-1704791646 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+#aboutSection h1 {
+    color: var(--headline-color-light-theme);
+    font-size: 2.5rem;
 }
 
-.custom-shape-divider-bottom-1704791646 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 46px;
-}
-
-.custom-shape-divider-bottom-1704791646 .shape-fill {
-    fill: #323438;
+#aboutSection h5 {
+    color: var(--headline-color-light-theme);
 }
 
 
-/* h5,
-h2 {
+
+.animation-text h4 {
+    text-align: center;
     color: #323438;
-} */
-.about .h5 .h2 {
+}
+
+.animation-text p {
     text-align: center;
     color: #34c7b6;
+    font-weight: 100px;
+    font-weight: bold;
 }
 
-.animation-text {
-    text-align: center;
-    color: #000;
-}
 
 
 .about {
-    padding: 3rem 3rem 3rem 3rem;
+    padding: 0rem 3rem;
     background: #f8f8f8;
     background-color: var(--BackgroundPage-color);
     display: flex;
@@ -67,7 +53,7 @@ h2 {
 
 .row .column {
     width: 100%;
-
+    /* background-color: black; */
 }
 
 .column .tabs {
@@ -89,7 +75,7 @@ h2 {
     display: block;
     padding: 10px 16px;
     border-radius: 4px;
-    color: #fff;
+    color: var(--button-text-color-light-theme);
     font-size: 0.8rem;
     font-weight: 600;
 }
@@ -103,10 +89,11 @@ h2 {
     height: 300px;
     width: 300px;
     border-radius: 100%;
-    border: solid 1px #34c7b6;
+    border: solid 2px var(--stroke-color-light-theme);
     margin: 0 auto;
 
 }
+
 
 .content {
     padding-top: 1.5rem;
@@ -127,7 +114,8 @@ h2 {
 
 
 .active-tab {
-    background: #18dcff;
+    background-color: transparent;
+    border: 1px solid var(--active-color);
     position: relative;
 }
 
@@ -143,12 +131,13 @@ h2 {
     height: 0;
     border-style: solid;
     border-width: 5px 5px 0 5px;
-    border-color: #18dcff transparent transparent;
+    border-color: var(--button-text-color-light-theme) transparent transparent;
+    color: #fff;
 
 }
 
 .active-tab h2 {
-    color: white;
+    color: var(--button-text-color-light-theme);
 }
 
 .content h2 {
@@ -160,10 +149,10 @@ h2 {
 
 .content p {
     padding-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     font-weight: 300;
-    /* color: #999; */
+    color: var(--paragraph-color-light-theme);
 }
 
 .content h3 {
