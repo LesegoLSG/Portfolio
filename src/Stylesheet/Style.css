@@ -7,6 +7,8 @@
 @import url("Nav.module.css");
 @import url("section.css");
 @import url("Navbar.css");
+@import url("Testimonial.css");
+@import url("Project.css");
 
 /* Colors for reusability */
 :root {
@@ -15,6 +17,33 @@
     --hover-color: transparent;
     --Black-color: #000;
     --White-color: #fff;
+
+
+
+    /* Dark background */
+    --background-color: #232946;
+    --headline-color: #fffffe;
+    --paragraph-color: #b8c1ec;
+    --button-color: #34c7b6;
+    --button-text-color: #232946;
+
+    --stroke-color: #121629;
+    --main-color: #b8c1ec;
+    --highlight-color: #34c7b6;
+
+
+
+    /* Light background */
+    --background-color-light-theme: #d4d8f0;
+    --headline-color-light-theme: #232946;
+    --paragraph-color-light-theme: #232946;
+    --button-color-light-theme: #34c7b6;
+    --button-text-color-light-theme: #232946;
+
+    --stroke-color-light-theme: #121629;
+    --main-color-light-theme: #b8c1ec;
+    --highlight-color-light-theme: #34c7b6;
+    --active-color: #232946;
 
 
 }
