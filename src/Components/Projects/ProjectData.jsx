@@ -1,7 +1,7 @@
 const projects = [
     {
-        title:'Project1',
-        description:'Description for project1',
+        title:'Project1Project1',
+        description:'Description for project1 xxxxxx xxxxxxx xxxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxxxx xxxxxxx',
         imageUrl:'Project1.jpg',
         link:'https://google.com',
     },

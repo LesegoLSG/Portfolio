@@ -2,29 +2,7 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
-    /* margin-top: 50px; */
-    /* background-image: url(../assets/Background-pen.jpg); */
-    /* background-color: red; */
-}
-
-.custom-shape-divider-bottom-1704776983 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1704776983 svg {
-    position: relative;
-    display: block;
-    width: calc(201% + 1.3px);
-    height: 86px;
-}
-
-.custom-shape-divider-bottom-1704776983 .shape-fill {
-    fill: #656a75;
+    background-color: var(--background-color);
 }
 
 .home-animation {
@@ -55,7 +33,7 @@
     height: 500px;
     background-size: cover;
     background-position: center center;
-    margin: 20px;
+    margin: 0px;
     box-shadow: 0 15px 15px 15px #34c7b6;
     animation: animate 5s ease-in-out infinite;
     transition: all 1s ease-in-out;

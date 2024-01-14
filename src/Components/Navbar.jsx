@@ -10,7 +10,7 @@ import {MdOutlineCancel} from 'react-icons/md';
 import {IoIosHome} from 'react-icons/io';
 import {BiSolidContact} from 'react-icons/bi';
 import { BiSolidInfoCircle } from "react-icons/bi";
-import {GoProjectSymlink} from 'react-icons/go';
+import {GoProjectSymlink,GoCrossReference } from 'react-icons/go';
 
 import LogoMakr from '../assets/LogoMakr.png';
 import Logo2 from '../assets/Logo2.png';
@@ -46,7 +46,7 @@ const Navbar = () => {
     const {activeLinkId} = useContext(NavContexts);
     console.log(activeLinkId);
 
-    const navLinks = ["Home","About", "Contact","Projects"];
+    const navLinks = ["Home","About", "Contact","Projects","Testimonials"];
 
     const renderNavLinks = (content) =>{
         const scrollToId = `${content.toLowerCase()}Section`;
@@ -69,6 +69,8 @@ const Navbar = () => {
                     return <BiSolidContact />;
                 case "Projects":
                     return <GoProjectSymlink />;
+                case "Testimonials":
+                    return <GoCrossReference />;
                 default:
                     return null;
             }
