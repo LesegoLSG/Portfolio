@@ -18,8 +18,8 @@ import { Typewriter } from 'react-simple-typewriter'
 import {HiMiniNewspaper} from 'react-icons/hi2';
 import {RiDownload2Fill} from 'react-icons/ri';
 import ParticleComponent from './Particles/ParticleComponent';
-
-import {animate, motion, useAnimation} from 'framer-motion'
+//Framer Motion
+import {whileInView, motion, useAnimation} from 'framer-motion'
 
 
 
@@ -90,14 +90,13 @@ const Home = () => {
       
         {/* <img src={Graduation} alt /> */}
       
-        <motion.div className="blob-image" ref={imageRef} 
-        initial={{x:-300}}
-        animate={{x:0,rotate:[0,90,-90,90,0]
-        }}
+        <motion.div className="blob-image"  
+        initial={{opacity:0,scale:0,y:200}}
+        whileInView={{opacity:1,scale:1,y:0}}
         transition={{
           type:"spring",
           bounce:0.4,
-          duration:3
+          duration:2
         }}
         
         >
@@ -105,12 +104,45 @@ const Home = () => {
         </motion.div>
         
     
-      <div className={`home-text ${!introVisible? 'fade-in':'fade-out'}`} ref={introRef}>
-    
-        <h1>Hi...</h1>
+      <div className="home-text">
+        {/* Motion for hi text */}
+        <motion.h1
+          initial={{y:-100}}
+          whileInView={{y:0}}
+          transition={{
+            duration:2
+          }}
+        >Hi...</motion.h1>
+
+
+        {/* Motion for the name */}
+        <motion.div 
+           initial={{x:-100}}
+           whileInView={{x:0}}
+           transition={{
+             duration:2
+           }}
+        >
         <h1>I'm <span className="name-span">Lesego Mhlongo</span></h1>
-        <h1>Fullstack Developer</h1>
-        <p ref={introRef}> I'm a skilled full stack developer with experience in creating:
+        </motion.div>
+
+
+        {/* Motion for "Fullstack developer" */}
+        <motion.h1
+           initial={{x:50}}
+           whileInView={{x:0}}
+           transition={{
+             duration:2
+           }}
+        >Fullstack Developer</motion.h1>
+        {/* Motion for animation text */}
+        <motion.p 
+            initial={{rotateX:360}}
+            whileInView={{rotateX:0}}
+            transition={{
+              duration:2
+            }}
+        ref={introRef}> I'm a skilled full stack developer with experience in creating:
            {' '}
            <br/>
            <span className="home-animation">
@@ -128,21 +160,20 @@ const Home = () => {
               />
            )}
            </span>
-        </p>
+        </motion.p>
+        {/* Motion for buttons */}
+        <motion.div
+          initial={{y:100}}
+          whileInView={{y:0}}
+          transition={{
+            duration:2
+          }}
+        >
         <button onClick={handlesubmit}><HiMiniNewspaper/> Hire Me</button>
         <button onClick={handleDownloadResume}><RiDownload2Fill/> Download resume</button>
+        </motion.div>
       </div>
 
-      </div>
-      <div class="custom-shape-divider-bottom-1704776983">
-      
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114
-          ,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-           class="shape-fill">
-           </path>
-      </svg>
-      
       </div>
    
        
