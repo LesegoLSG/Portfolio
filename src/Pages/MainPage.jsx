@@ -9,6 +9,9 @@ import NavProvider from '../Context/NavContexts';
 import Project from '../Components/Projects/Project';
 import ParticleComponent from '../Components/Particles/ParticleComponent';
 import { UseNav } from '../Components/NavigationLinks/UseNav';
+import Testimonial from '../Components/Testimonials/Testimonial';
+
+
 
 const MainPage = () => {
 
@@ -16,11 +19,11 @@ const MainPage = () => {
     <div>
         <NavProvider>
         <Navbar />
-        {/* { <ParticleComponent/> } */}
         <Home />
         <About />
         <Contact />
         <Project/>
+        <Testimonial/>
         <Footer />
       </NavProvider>
 
