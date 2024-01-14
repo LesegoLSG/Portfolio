@@ -12,7 +12,7 @@ const Project = () => {
   return (
     <section ref={projectsRef} id="projectsSection">
       <h5>Check My Capabilities</h5>
-      <h2>Projects</h2>
+      <h1>Projects</h1>
         <ProjectList projects={projects}/>
     </section>
   )
